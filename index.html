@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-gumroad-field="name">UMMTM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap');
+    
+    .tail-container {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    .logo-font {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .hero-grid {
+      background-image: 
+        linear-gradient(to right, #e5e5e5 1px, transparent 1px),
+        linear-gradient(to bottom, #e5e5e5 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .dark .hero-grid {
+      background-image: 
+        linear-gradient(to right, #27272a 1px, transparent 1px),
+        linear-gradient(to bottom, #27272a 1px, transparent 1px);
+    }
+
+    .ds-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .ds-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    }
+
+    .accent {
+      color: rgb(129 140 248);
+    }
+    .dark .accent {
+      color: rgb(165 180 252);
+    }
+  </style>
+</head>
+<body class="tail-container bg-zinc-50 dark:bg-neutral-950 text-zinc-900 dark:text-zinc-200">
+
+  <!-- NAV -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-md border-b border-zinc-200 dark:border-neutral-800">
+    <div class="max-w-screen-2xl mx-auto px-10 py-6 flex items-center justify-between">
+      <div class="flex items-center gap-x-3">
+        <div class="w-7 h-7 rounded-2xl bg-indigo-600 flex items-center justify-center text-white text-xl font-bold logo-font">U</div>
+        <span data-gumroad-field="name" class="text-2xl font-semibold tracking-tighter logo-font">UMMTM</span>
+      </div>
+      <div class="flex items-center gap-x-10 text-sm font-medium">
+        <a href="#system" class="hover:text-indigo-500 transition-colors">The System</a>
+        <a href="#components" class="hover:text-indigo-500 transition-colors">Components</a>
+        <a href="#principles" class="hover:text-indigo-500 transition-colors">Principles</a>
+        <button onclick="toggleDarkMode()" class="text-xl px-3">
+          <i class="fa-solid fa-moon dark:hidden"></i>
+          <i class="fa-solid fa-sun hidden dark:block"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-grid pt-32 pb-24 border-b border-zinc-200 dark:border-neutral-800">
+    <div class="max-w-screen-2xl mx-auto px-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center rounded-full border border-indigo-200 dark:border-indigo-900 px-4 py-1.5 text-xs font-medium text-indigo-600 dark:text-indigo-400 mb-6">
+          <span class="relative flex h-2 w-2 mr-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+          </span>
+          DESIGN SYSTEM FOR THOUGHT
+        </div>
+
+        <h1 class="text-7xl font-semibold tracking-tighter leading-none logo-font mb-6">
+          Think with<br>clarity and<br><span class="accent">precision</span>.
+        </h1>
+        
+        <p data-gumroad-field="description" class="text-xl text-zinc-600 dark:text-neutral-400 max-w-lg">
+          UMMTM is a complete mental design system — principles, components, and patterns to systematize high-quality thinking.
+        </p>
+
+        <div class="flex items-center gap-4 mt-10">
+          <button onclick="buyProduct()" 
+                  data-gumroad-action="buy"
+                  class="px-10 py-4 bg-neutral-900 hover:bg-black dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-100 text-white font-semibold rounded-2xl transition-all text-lg">
+            Get the System
+          </button>
+          
+          <button onclick="buyProduct('Lifetime')" 
+                  data-gumroad-action="buy"
+                  data-gumroad-option="Lifetime"
+                  class="px-8 py-4 border border-zinc-300 dark:border-neutral-700 hover:border-zinc-400 rounded-2xl font-medium transition-all">
+            Lifetime Access
+          </button>
+        </div>
+
+        <div class="mt-8 flex items-center gap-x-8 text-sm">
+          <div class="flex items-center gap-x-2">
+            <span data-gumroad-field="rating" class="font-semibold text-amber-500">4.98</span>
+            <span data-gumroad-field="review-count" class="text-zinc-500 dark:text-neutral-400">• Be the first to review</span>
+          </div>
+          <div class="h-3 w-px bg-zinc-300 dark:bg-neutral-700"></div>
+          <div class="text-emerald-500 text-sm font-medium">✓ Instant delivery • Lifetime updates</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SYSTEM SECTION -->
+  <section id="system" class="py-24 bg-white dark:bg-neutral-950">
+    <div class="max-w-screen-2xl mx-auto px-10">
+      <h2 class="text-4xl font-semibold tracking-tight mb-16 text-center">A complete design system for your mind</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="ds-card bg-white dark:bg-neutral-900 border border-zinc-100 dark:border-neutral-800 rounded-3xl p-10">
+          <div class="text-indigo-500 text-4xl mb-6">01</div>
+          <h3 class="text-2xl font-semibold mb-3">Foundations</h3>
+          <p class="text-zinc-600 dark:text-neutral-400">Core mental models, axioms, and first principles that serve as the foundation of all thinking.</p>
+        </div>
+        <div class="ds-card bg-white dark:bg-neutral-900 border border-zinc-100 dark:border-neutral-800 rounded-3xl p-10">
+          <div class="text-indigo-500 text-4xl mb-6">02</div>
+          <h3 class="text-2xl font-semibold mb-3">Components</h3>
+          <p class="text-zinc-600 dark:text-neutral-400">Reusable thinking patterns and cognitive primitives you can compose together.</p>
+        </div>
+        <div class="ds-card bg-white dark:bg-neutral-900 border border-zinc-100 dark:border-neutral-800 rounded-3xl p-10">
+          <div class="text-indigo-500 text-4xl mb-6">03</div>
+          <h3 class="text-2xl font-semibold mb-3">Patterns</h3>
+          <p class="text-zinc-600 dark:text-neutral-400">Proven combinations of components that solve complex cognitive problems at scale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <div class="bg-neutral-900 text-white py-20">
+    <div class="max-w-screen-2xl mx-auto px-10 text-center">
+      <h2 class="text-5xl font-semibold tracking-tighter mb-6">Start thinking in systems</h2>
+      <p class="text-neutral-400 max-w-md mx-auto mb-10">
+        Join the growing number of founders, designers, and thinkers using UMMTM as their default cognitive operating system.
+      </p>
+      <button onclick="buyProduct()" 
+              data-gumroad-action="buy"
+              class="px-12 py-6 bg-white text-neutral-900 font-semibold text-xl rounded-3xl hover:scale-105 transition-transform">
+        Purchase UMMTM
+      </button>
+    </div>
+  </div>
+
+  <footer class="bg-white dark:bg-neutral-950 border-t border-zinc-200 dark:border-neutral-800 py-12">
+    <div class="max-w-screen-2xl mx-auto px-10 text-center text-sm text-zinc-500 dark:text-neutral-400">
+      © 2025 UMMTM • A Design System for Thought
+    </div>
+  </footer>
+
+  <script>
+    function initializeTailwind() {
+      tailwind.config = { content: [], darkMode: 'class' };
+    }
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+      localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+    }
+
+    function buyProduct(option = null) {
+      let btn = document.querySelector('[data-gumroad-action="buy"]');
+      if (option) {
+        const clone = btn.cloneNode(true);
+        clone.setAttribute('data-gumroad-option', option);
+        document.body.appendChild(clone);
+        clone.click();
+        setTimeout(() => clone.remove(), 50);
+      } else {
+        btn.click();
+      }
+    }
+
+    window.onload = () => {
+      initializeTailwind();
+      if (localStorage.getItem('theme') === 'dark' || 
+         (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+      console.log('%cUMMTM Design System Landing Page Ready', 'color:#6366f1; font-family:monospace; font-size:13px');
+    };
+  </script>
+</body>
+</html>
